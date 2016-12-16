@@ -1,0 +1,140 @@
+<section class="email-set">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="welcome-text">
+				<h1>Fill in all the fields</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row"  ng-controller="Ctrl">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="email-box">
+				<form ng-submit="submit()">
+					<fieldset>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxl">
+									<label>Personal Information</label>
+									<input type="text" name="name" ng-model="name" placeholder="Name">
+									<input type="email" name="email" ng-model="email" placeholder="Email">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxr nice-form">
+									<input type="tel" name="phone" ng-model="phone" placeholder="Phone">
+									<label for="check-1">
+										<input id="check-1" type="checkbox">
+										<span class="fake-input"></span>
+										<span class="fake-label">Send similar ads <span class="qustion"></span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxl dot">
+									<input type="text" name="Car" ng-model="car" placeholder="Car">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxr">
+									<input type="text" name="Model" ng-model="model" placeholder="Model">
+								</div>
+							</div>
+						</div>
+							<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxl dot">
+									<input type="text" name="engine" ng-model="engine" placeholder="Engine">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxr">
+									<input type="text" name="transmission" ng-model="transmission" placeholder="Transmission">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxl dot">
+									<input type="text" name="fuel" ng-model="fuel" placeholder="Fuel">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxr">
+									<input type="text" name="mileage" ng-model="mileage" placeholder="Mileage">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxl dot">
+									<input type="text" name="price" ng-model="price" placeholder="Price">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxr">
+									<input type="text" name="year" ng-model="year" placeholder="Year">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxl dot">
+									<input type="text" name="img" ng-model="imageUrl" placeholder="Image url">
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxr">
+									<textarea name="snippet" ng-model="snippet" placeholder="Description"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxl dot">
+									<a href="#/" class="back">Back</a>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="form-boxr">
+									<input type="submit" id="submit" class="next" value="Submit" />
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<a href ng-click="goCats = !goCats" class="back">Show ad</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12" ng-show="goCats">
+			<ul class="carList">
+				<li>
+					<div class="imageCar"><img src="{{imageUrl}}"/></div>
+					<div class="boxDiscr">
+						<a href="#/" class="hNewS">
+							<span class="car">{{car}}</span>
+							<span class="model">{{model}}</span>
+							<span class="year">{{year}}</span>
+						</a>
+						<div class="price"><span class="glyphicon glyphicon-usd"></span> {{price}}</div>
+						<div class="NewCarNN">
+							<span class="mileage"><span class="glyphicon glyphicon-dashboard"></span> {{mileage}}</span>
+							<span class="fuel"><span class="glyphicon glyphicon-tint"></span> {{fuel}} <span class="engine">{{engine}}</span></span>
+							<span class="transmission"><span class="transmission glyphicon glyphicon-cog"></span> {{transmission}}</span>
+						</div>
+						<div class="descrip">{{snippet}}</div>
+						<div class="telep"><span class="glyphicon glyphicon-earphone"></span> {{phone}}</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+	
+</section>

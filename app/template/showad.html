@@ -1,0 +1,20 @@
+<ul class="carList">
+	<li ng-repeat="ca in cars">
+		<div class="imageCar"><img src="{{ca.imageUrl |  images/car/002.jpg}}"/></div>
+		<div class="boxDiscr">
+			<a href="#/" class="hNewS">
+				<span class="car">{{ca.car}}</span>
+				<span class="model">{{ca.model}}</span>
+				<span class="year">{{ca.year}}</span>
+			</a>
+			<div class="price"><span class="glyphicon glyphicon-usd"></span> {{ca.price}}</div>
+			<div class="NewCarNN">
+				<span class="mileage"><span class="glyphicon glyphicon-dashboard"></span> {{ca.mileage}}</span>
+				<span class="fuel"><span class="glyphicon glyphicon-tint"></span> {{ca.fuel}}.<span class="engine">{{ca.engine}}</span></span>
+				<span class="transmission"><span class="transmission glyphicon glyphicon-cog"></span> {{ca.transmission}}</span>
+			</div>
+			<div class="descrip">{{ca.snippet}}</div>
+			<div class="telep"><span class="glyphicon glyphicon-earphone"></span> {{ca.phone}}</div>
+		</div>
+	</li>
+</ul>
