@@ -29,7 +29,7 @@ carApp.controller('HomeController', ['$scope', '$http', '$location', function($s
 }]);
 
 carApp.controller('BuyController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-		$http.get('../cars/cars.json').success(function(data, status , headers, config) {
+		$http.get('/cars/cars.json').success(function(data, status , headers, config) {
 			$scope.cars = data;
 		});
 }]);
@@ -40,7 +40,7 @@ carApp.controller('SController', ['$scope', '$http', '$location', function($scop
 	$scope.car = car;
 }]);
 carApp.controller('ShowAdController', ['$scope', '$http', '$location', function($scope, $http, $location) {
-	$http.get('/car/car.json').success(function(data, status , headers, config) {
+	$http.get('/cars/car.json').success(function(data, status , headers, config) {
 			$scope.cars = data;
 		});
 }]);
